@@ -48,7 +48,7 @@ def ask_gender():
             his kingdom. With the help of {5}, {6}, and {7}, {4} pillaged their land,
             stole precious resources, and brutally attacked their villagers.
             King {0} and Queen {1} with the help of {8}, {9}, and {10} valiantly 
-            fought back and defeated {4} after {8} years of fierce fighting. Order was finally
+            fought back and defeated {4} after {11} years of fierce fighting. Order was finally
             restored and everyone in their kingdom lived happily ever after :-).""".format(your_name, queen_name, kingdom, war_name, villian,
             thief, evil_sorcerer, rogue, paladin, wizard, warrior, years)
             print(message)
@@ -80,18 +80,15 @@ def ask_gender():
         your_name = input('Enter your name: ')
         king_name = input('What\'s the name of your king? ')
         kingdom = input('What\'s the name of your kingdom? ')
-        your_name, king_name, kingdom = your_name.capitalize(), king_name.capitalize(), kingdom.capitalize()
         have_allies = input('Do you have allies? Enter "y" for yes or "n" for no. ')
         have_enemies = input('Do you have enemies? Enter "y" for yes or "n" for no. ')
-        have_allies, have_enemies = have_allies.capitalize(), have_enemies.capitalize()
 
         if have_allies == 'y':
             paladin = input('Enter your paladin\'s name ')
             wizard = input('Enter your wizard\'s name ')
             warrior = input('Enter your warrior\'s name ')
-            paladin, wizard, warrior = paladin.capitalize(), wizard.capitalize(), \
-                                           warrior.capitalize()
-        elif have_allies == 'n':
+
+        if have_allies == 'n':
             pass
 
         if have_enemies == 'y':
@@ -102,8 +99,7 @@ def ask_gender():
             thief = input('Enter your thief\'s name ')
             evil_sorcerer = input('Enter evil sorcerer\'s name ')
             rogue = input('Enter rogue\'s name ')
-            thief, evil_sorcerer, rogue = thief.capitalize(), evil_sorcerer.capitalize(), rogue.capitalize()
-        elif have_enemies == 'n':
+        if have_enemies == 'n':
             pass
 
         if have_allies == 'y' and have_enemies == 'y':
@@ -113,13 +109,13 @@ def ask_gender():
             her kingdom. With the help of {5}, {6}, and {7}, {4} pillaged their land,
             stole precious resources, and brutally attacked their villagers.
             Queen {0} and King {1} with the help of {8}, {9}, and {10} valiantly 
-            fought back and defeated {4} after {8} years of fierce fighting. Order was finally
-            restored and everyone in their kingdom lived happily ever after :-).""".format(your_name, king_name,
-                                                                                               kingdom, war_name,
-                                                                                               villian,
-                                                                                               thief, evil_sorcerer,
-                                                                                               rogue, paladin, wizard,
-                                                                                               warrior, years)
+            fought back and defeated {4} after {11} years of fierce fighting. Order was finally
+            restored and everyone in their kingdom lived happily ever after :-).""".format(your_name.capitalize(), king_name.capitalize(),
+                                                                                               kingdom.capitalize(), war_name.capitalize(),
+                                                                                               villian.capitalize(),
+                                                                                               thief.capitalize(), evil_sorcerer.capitalize(),
+                                                                                               rogue.capitalize(), paladin.capitalize(), wizard.capitalize(),
+                                                                                               warrior.capitalize(), years)
             print(message)
         elif have_allies == 'y' and have_enemies == 'n':
             message = """
@@ -134,7 +130,7 @@ def ask_gender():
                         The great {0} and her king {1} peacefully ruled the kingdom of
                         {2} for many years. However, one evening their nemesis {3} with the help of
                         {4}, {5}, and {6} invaded their kingdom which lead to an infamous war in {2}
-                        history called {8}. This war lasted {9} years. In the end {3} and his goons pillaged the land, destroyed the villagers,
+                        history called {7}. This war lasted {8} years. In the end {3} and his goons pillaged the land, destroyed the villagers,
                         and usurped {0} and {1}. THE END :-(""".format(your_name, king_name, kingdom, villian,
                                                                            thief, evil_sorcerer, rogue, kingdom,
                                                                            war_name, years)
