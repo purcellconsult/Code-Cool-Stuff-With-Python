@@ -4,8 +4,8 @@
 # https://www.lotteryusa.com/california
 #
 # This script models the following:
-# Daily 3:
-# Daily 4:
+# Daily 3
+# Daily 4
 #
 # By Doug Purcell
 # http://www.purcellconsult.com
