@@ -1,15 +1,11 @@
-################################
-# Party lights
-#
-#
-#
+##################################
+# Party lights in turtle
 #
 #
 # By Doug Purcell
 # http://www.purcellconsult.com
-#
-#
-##################################
+
+###################################
 
 import turtle
 from random_colors import get_random_color
