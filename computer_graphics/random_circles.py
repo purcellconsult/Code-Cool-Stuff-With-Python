@@ -20,8 +20,8 @@ def create_circles(amount=100):
 
     cir = turtle.Turtle()
     cir.speed(0)
-    size = amount
-    for cycles in range(size):
+    quantity_circles = amount
+    for cycles in range(quantity_circles):
         x, y = randint(-300, 300), randint(-400, 400)
         rad = randint(5, 50)
         cir.begin_fill()
