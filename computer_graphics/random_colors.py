@@ -15,7 +15,7 @@
 from random import randint
 
 turtle_colors = [
-    'snow', 'snow2', 'snow3', 'snow4','ghostwhite', 'whitesmoke',
+    'snow', 'snow2', 'snow3', 'snow4', 'ghostwhite', 'whitesmoke',
     'gainsboro', 'floralwhite', 'oldlace', 'linen', 'antiquewhite',
     'antiquewhite2', 'antiquewhite2', 'antiquewhite3', 'antiquewhite4',
     'papayawhip', 'blanchedalmond','bisque', 'bisque2', 'bisque3', 'bisque4',
@@ -60,9 +60,81 @@ def number_of_colors():
 def get_random_color():
     """
     returns a random color from
-    the list.
+    all of the 150 options.
     """
     x = randint(0, number_of_colors()-1)
+    return turtle_colors[x]
+
+"""
+Use the following functions if
+you want to only return colors from
+a similar shade 
+"""
+
+
+def whites_and_pastels():
+    """
+    gets a light color such as
+    snow or cornsilk
+    """
+    x = randint(0, 50)
+    return turtle_colors[x]
+
+
+def grays():
+    """
+    returns colors from black
+    to light gray
+    """
+    x = randint(51, 56)
+    return turtle_colors[x]
+
+
+def blues():
+    """
+    returns shades of blue.
+    """
+    x = randint(58, 83)
+    return turtle_colors[x]
+
+
+def greens():
+    """
+    returns shades of green.
+    """
+    x = randint(83, 103)
+    return turtle_colors[x]
+
+
+def yellows():
+    """
+    returns shades of yellow
+    """
+    x = randint(103, 110)
+    return turtle_colors[x]
+
+
+def browns():
+    """
+    returns shades of brown
+    """
+    x = randint(110, 123)
+    return turtle_colors[x]
+
+
+def oranges():
+    """
+    returns shades of orange.
+    """
+    x = randint(123, 131)
+    return turtle_colors[x]
+
+
+def pinks_violets():
+    """
+    returns shades of pink and violets.
+    """
+    x = randint(131, 151)
     return turtle_colors[x]
 
 
