@@ -27,8 +27,9 @@ def create_rectangle(l=100, w=50, r=5, c=5):
     :param r: rows
     :param c: columns
     """
-    x = -screen.screensize()[0]
-    y = screen.screensize()[1]
+
+    x = -screen.screensize()[0]     # gets farthest left point
+    y = screen.screensize()[1]      # gets height of the screen
     length, width, rows, cols = l, w, r, c
 
     for outer in range(rows):
