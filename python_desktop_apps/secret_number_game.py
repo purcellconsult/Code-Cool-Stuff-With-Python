@@ -33,9 +33,9 @@ class SecretNumberGame:
 
         # Labels
 
-        self.game_banner = tk.Label(text='The Secret Number Guessing Game!').place(x=0, y=0, width=500, height=50)
+        self.game_banner = tk.Label(text='Guess Any Number From 1-100').place(x=0, y=0, width=500, height=50)
         self.guess_number_label = tk.Label(text='Guess Number').place(x=50, y=85, width=100)
-        self.your_tries = tk.Label(text=f'You have {self.tries} tries').place(x=225, y=180, width=200)
+        self.your_tries = tk.Label(text=f'You have {self.tries} tries').place(x=225, y=160, width=200)
 
         # Entry Widgets
 
@@ -55,12 +55,13 @@ class SecretNumberGame:
         your_guess = int(your_guess)
 
         if self.tries == 1:
-            self.your_tries = tk.Label(text=f'Game Over!!!').place(x=225, y=180, width=200)
+            self.your_tries = tk.Label(text=f'Game Over!!!').place(x=225, y=160, width=200)
             self.secret_num_str_var.set(self.secret_number)
             tk.Label(text=f'{self.secret_number} is the secret number!').place(x=225, y=230, width=250)
             self.guess_number_widget = None
         elif your_guess == self.secret_number:
-            self.your_tries = tk.Label(text='You Win!!!').place(x=225, y=180, width=200)
+            self.your_tries = tk.Label(text='You Win!!!').place(x=225, y=160, width=200)
+            self.secret_num_str_var.set(self.secret_number)
         elif your_guess > self.secret_number:
             self.tries -= 1
             tk.Label(text=f'{your_guess} is too big').place(x=225, y=160, width=200)
