@@ -1,5 +1,8 @@
 #####################################
 # Random circles in turtle
+# ------------------------
+# Creates randomed colored circles
+# in python.
 #
 #
 # By Doug Purcell
@@ -12,24 +15,27 @@ from random_colors import get_random_color
 from random import randint
 
 
-def create_circles(amount=100):
+def create_circles(amount=500):
     """
     Learn how to create random circles
     in python.
     """
-
     cir = turtle.Turtle()
     cir.speed(0)
     quantity_circles = amount
+    length = cir.getscreen().window_width()
+    height = cir.getscreen().window_height()
     for cycles in range(quantity_circles):
-        x, y = randint(-300, 300), randint(-400, 400)
+        cir.color(get_random_color())
+        cir.penup()
+        x, y = randint(-length, length), randint(-height, height)
+        cir.goto(x, y)
+        cir.pendown()
         rad = randint(5, 50)
         cir.begin_fill()
         cir.color(get_random_color())
-        cir.penup()
-        cir.goto(x, y)
-        cir.circle(rad)
         cir.pendown()
+        cir.circle(rad)
         cir.end_fill()
     turtle.done()
 
