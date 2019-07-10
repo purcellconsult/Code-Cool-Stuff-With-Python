@@ -105,6 +105,7 @@ class TurtleRace:
                 self.finish.pendown()
                 self.finish.write('Red Wins!', font=('Verdana', 13))
                 race_on = False
+                return self.red
             elif self.blue.pos()[0] >= self.finish.pos()[0]:
                 self.blue.forward(self.blue_speed * 2.75)
                 self.finish.penup()
@@ -112,6 +113,7 @@ class TurtleRace:
                 self.finish.pendown()
                 self.finish.write('Blue Wins!', font=('Verdana', 13))
                 race_on = False
+                return self.blue
             elif self.green.pos()[0] >= self.finish.pos()[0]:
                 self.green.forward(self.green_speed * 2.75)
                 self.finish.penup()
@@ -119,6 +121,7 @@ class TurtleRace:
                 self.finish.pendown()
                 self.finish.write('Green Wins!', font=('Verdana', 13))
                 race_on = False
+                return self.green
             elif self.black.pos()[0] >= self.finish.pos()[0]:
                 self.black.forward(self.black_speed * 2.75)
                 self.finish.penup()
@@ -126,6 +129,29 @@ class TurtleRace:
                 self.finish.pendown()
                 self.finish.write('Black Wins!', font=('Verdana', 13))
                 race_on = False
+                return self.black
+
+    def victor_dance(self):
+        """
+        silly little dance the winner
+        turtle does after winning.
+        """
+        if self.turtle_race() == self.red:
+            for x in range(50):
+                self.red.right(90)
+            self.red.shapesize(10, 10)
+        elif self.turtle_race() == self.blue:
+            for x in range(50):
+                self.blue.right(29)
+            self.blue.shapesize(10, 10)
+        elif self.turtle_race() == self.green:
+            for x in range(50):
+                self.green.right(30)
+            self.green.shapesize(10, 10)
+        elif self.turtle_race() == self.black:
+            for x in range(15):
+                self.black.right(90)
+            self.black.shapesize(10, 10)
 
     def finish_line(self):
         """
@@ -173,5 +199,5 @@ if __name__ == '__main__':
         message.clear()
     race.set_turtle_speeds()
     race.turtle_race()
+    race.victor_dance()
     turtle.done()
-    
