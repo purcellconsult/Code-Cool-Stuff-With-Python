@@ -35,10 +35,10 @@ class TurtleRace:
          Set it equal to the width + 100 so that
          it'll appear on the screen.
         '''
-        self.red_x = self.width + (-self.width/10)
-        self.blue_x = self.width + (-self.width/10)
-        self.green_x = self.width + (-self.width/10)
-        self.black_x = self.width + (-self.width/10)
+        self.red_x = self.width + (-self.width / 10)
+        self.blue_x = self.width + (-self.width / 10)
+        self.green_x = self.width + (-self.width / 10)
+        self.black_x = self.width + (-self.width / 10)
 
         self.red_y = self.height - (self.height / 1.20)
         self.blue_y = self.height - (self.height / 1.1)
