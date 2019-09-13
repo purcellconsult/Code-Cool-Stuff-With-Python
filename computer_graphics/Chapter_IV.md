@@ -12,9 +12,9 @@ Below is the code for it:
  
     import turtle
     leonardo = turtle.Turtle()
-    leonardo.shape(**'turtle'**)
+    leonardo.shape('turtle')
     leonardo.shapesize(7.5, 7.5)
-    leonardo.color(**'green'**)
+    leonardo.color('green')
     turtle.done()
 
   
@@ -172,3 +172,52 @@ Here’s some more examples of the things you can do with `PyRandomColor` so tha
 Here’s the output:
 
 ![Random Color Square](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/computer_graphics/images/random_color_square_2.png)
+
+## How to Craft Beautiful Designs From Ugly Shapes with Turtle and PyRandomColor
+
+Putting together simple shapes is an easy way to draw complex and surprisingly stunning patterns. Let’s start with what we already know which is the square. We can use that simple shape to create a multi-colored cube as shown in the following code snippet:
+
+    import turtle
+    from random_colors import get_random_color
+    square = turtle.Turtle()
+    square.hideturtle()
+    for x in range(4):
+        square.color(get_random_color(), get_random_color())
+        square.begin_fill()
+        square.right(90)
+        for y in range(4):
+            square.forward(100)
+            square.right(90)
+        square.end_fill()
+    turtle.done()
+
+Below is one way in which the image could look:
+
+![Square Cube](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/computer_graphics/images/square_cube.png)
+
+A nested loop is used to create four squares of varying colors. After each iteration the new square is rotated 90 degrees and then the new square is created. Can you guess what happens is that if the inner loop iterated two cycles instead of 4? Here’s how it would manipulate the image:
+
+![Triangle Cube](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/computer_graphics/images/triangle_cube.png)
+
+It will be a cube of multicolored triangles instead of squares. We can continue to create a more complex images by building on top of the simple code for creating a square. Let’s make some tweaks to the **square cube** code as shown below:
+
+    import turtle
+    from random_colors import get_random_color
+    square = turtle.Turtle()
+    square.hideturtle()
+    square.speed(0)
+    for x in range(50):
+        square.color(get_random_color(), get_random_color())
+        square.begin_fill()
+        square.right(35)
+        for y in range(4):
+            square.forward(100)
+            square.right(90)
+        square.end_fill()
+    turtle.done()
+    
+If we do that then we can get an interesting image as shown below:
+
+![Square Artwork](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/computer_graphics/images/square_artwork.png)
+
+This image looks complex but the code is straightforward. It’s an image that contains 50 squares which are rotated by 35 degrees after each complete inner loop cycle. Go ahead and play with the code to see how a couple of tweaks to these simple _turtle algorithms_ can create  derivative artwork.
