@@ -19,8 +19,28 @@ Below is the code for it:
 
   
 
-The first thing we need to do is import the turtle module so that we can use all of the builtin functionality. Check out all of the features of the turtle module here: [https://docs.python.org/3.3/library/turtle.html?highlight=turtle](https://docs.python.org/3.3/library/turtle.html?highlight=turtle)
-
+The first thing we need to do is import the turtle module so that we can use all of the builtin functionality. 
   
+After the turtle module is imported we can go ahead and call the `Turtle()` constructor. From there we can change the default shape of the turtle object to something more appealing like you guessed it, a turtle. From there we can call various functions on it to manipulate its appearance such as `shapesize()` and `color()`. We must then use the `done()` method to start the event loop which in essence calls the Tkinter’s main loop function. We’ll learn about Tkinter in Chapter V but just remember that into the meantime you need it at the end of your program.
 
-After the turtle module is imported we can go ahead and call the `Turtle()` constructor. From there we can change the default shape of the turtle object to something more appealing like you guessed it, a turtle. From there we can call various functions on it to manipulate its appearance such as `shapesize()` and `color()`. We must then use the `done()` method to start the event loop which in essence calls the Tkinter’s main loop function. We'll learn about Tkinter in Chapter V but just remember that into the meantime you need it at the end of your program.
+## Coding a Simple Square in Turtle
+
+Lets reminiscence about the time our geometry teacher taught us about important things in life such as the x-y coordinate plane, how to plot, and the foundations of shapes. Remember any of that? If so then great because it will serve you well when learning about the basics of turtle. Lets go back down memory lane, do you recall the essential features of a square? Facts like that they have four equal sides and four right angles. 
+
+We can easily create a square in turtle but we need to know a couple of things. For one, we need to know how to move forward, and we also need to know how to create angles as the interior of a square should be 90 degrees. In order to do this we need to use the builtin methods of forward and turn. Below is a demo of how to create a square in python:
+
+    import turtle
+    square = turtle.Turtle()
+    square.hideturtle()
+    square.forward(100)
+    square.right(90)
+    square.forward(100)
+    square.right(90)
+    square.forward(100)
+    square.right(90)
+    square.forward(100)
+    turtle.done()
+
+Below is the image that it will render:
+
+![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/computer_graphics/images/simple_turtle.png)
