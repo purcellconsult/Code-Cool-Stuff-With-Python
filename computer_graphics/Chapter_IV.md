@@ -221,3 +221,163 @@ If we do that then we can get an interesting image as shown below:
 ![Square Artwork](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/computer_graphics/images/square_artwork.png)
 
 This image looks complex but the code is straightforward. It’s an image that contains 50 squares which are rotated by 35 degrees after each complete inner loop cycle. Go ahead and play with the code to see how a couple of tweaks to these simple _turtle algorithms_ can create  derivative artwork.
+
+## A Randomly Generated Night Sky with Shining Stars
+
+The sky dotted with stars is a beautiful sight to see. The good news is that you don’t have to be in the Grand Canyon to stargaze as you can bring the sky to your computer screen as shown in the image below:
+
+![Night](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/computer_graphics/images/night.png)
+
+To emulate the effect of the star-dotted-sky we need two things: a black background and a whole bunch of circles of various sizes spread throughout. To re-create this image we need to first learn how to make circles which fortunately is simple with turtle. Here’s the method signature for circles:
+
+    turtle.circle(radius, extent=None, steps=None)
+
+The radius is the distance from the center of a circle to any point on its circumference. The _extent_ if not given draws the entire circle, and if given draws an arc. The arc is drawn in a counterclockwise direction if the radius is positive, otherwise it’s drawn in a clockwise direction. Let's learn how to create a simple circle and then a simple arc. The following code snippet shows a full circle:
+
+    import turtle
+    x = turtle.Turtle()
+    x.hideturtle()
+    x.pensize(2)
+    x.circle(100)
+    turtle.done()
+
+Below is an example of how the circle looks in python:
+
+![Circle](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/computer_graphics/images/circle.png)
+
+As you have probably figured out the bigger you make the radius the bigger the circle, and vice-versa. To simulate an arc pass in a keyword argument in the circle method as shown below:
+
+    import turtle
+    x = turtle.Turtle()
+    x.hideturtle()
+    x.pensize(2)
+    x.circle(100, extent=150)
+    turtle.done()
+
+Below is the generated image:
+
+![Arc](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/computer_graphics/images/arc.png)
+
+Now, with our newfound knowledge of circles we have one more thing that we need to know. We need to know how to move turtle objects on the screen. The reason for this is that we don’t want to plot all of the circles at the same exact position because doing so will lead to a blob of circles around the same area which is kind of awkward. Instead, we want to randomly draw the circles at various locations on the screen in order to get a better distribution of circles. We can accomplish this by using three more methods from the turtle class:
+
+-   `penup`: Picks the pen up, no drawing happens.
+-   `pendown`:Puts the pen down.
+-   `goto(x, y=None)`: Move the turtle to the x and y coordinates.
+
+The `penup` and `pendown` methods operates the exact way you’ll think when you’re drawing on a piece of paper. If you're sitting at your desk sketching a masterpiece what happens when you decide to pick your pen up and move it to a different position on the paper you’re sketching on? The pen appears at a different part on your paper, and of course when the pen is in the air no drawing happens.
+
+When you put your pen back down this is when the drawing happens. This is important to use in turtle because if you don’t use these methods and instead just use the `goto` method then lines will be drawn along the path which is not what you want. In other words, it’s like if you’re sketching a stick man on a piece of paper and instead of picking the pen up to draw the individual components, you keep the pen down the entire time which will lead to ugly squiggly lines along the way.
+
+Lastly, we need to set the background color of the screen which can be done by using the `bgcolor` method from the Screen class. From there we can call the `bgcolor` method in order to modify the color. Let’s code the night sky in turtle by first including all of the imports:
+
+    import turtle
+    from random import randint
+    from random_colors import whites_and_pastels
+
+We’ll import the turtle module in order to use its functionality, the `randint` function from random to generate random numbers which will be used for positioning, and then the `white_and_pastels` function from the `PyRandomColor` module in order to give the stars various shades to mimic the sky. Below is the beginning of the function definition:
+
+    def create_night_sky(stars=1000):
+        sky = turtle.Turtle()
+        sky.speed(0)
+        turtle.Screen().bgcolor('black')
+
+Here we’re just creating a function with a default argument of 1000. This simply represents how many stars will be in the final image. Next, the turtle constructor is called and the speed is set to 0 so that the images will be drawn at the fastest rate possible. The `bgcolor` method from the `Screen` instance is called to set the background of the screen to black which will give us the _night sky_ effect. Now, here’s the rest of the function:
+
+    num = stars
+    for x in range(num):
+        sky.color(whites_and_pastels())
+        sky.begin_fill()
+        sky.penup()
+        sky.goto(randint(-300, 300), randint(-300, 300))
+        sky.circle(randint(1, 5))
+        sky.pendown()
+        sky.end_fill()
+    turtle.done()
+
+
+Here's where the stars are created and then moved each iteration. We create a for loop which iterates by default 1000 cycles. From there, we set the colors of the starts. To do this we again need to utilize the color, `begin_fill`, and `end_fill` methods. Since we want to arbitrarily determine the position of the stars that we want to draw, we can use the `penup`, `goto`, and `pendown` methods. Remember, the `penup` method is used to pick the pen up so that no lines follow when the position is being allocated. We then pass the `randint` function into the x and y arguments of `goto` to randomly determine the x/y coordinates of where the circle will be displayed.
+
+
+Once the position is located we can use the circle method to create the actual circle. Since we want to simulate stars in the sky, we need to ensure that some stars are bigger than others. How can we accomplish this? We need to arbitrarily set the radius of the circle by again using the `randint` function. The last statement in the program must be `turtle.done()` so that the final image will stay; without this then the outputted image goes _bye-bye_. We can then run the program to see the sky populated with varying sized stars in various locations. Every time the program is ran the output will be different but it could be difficult to tell without screenshotting and comparing the pictures due to the small size of the circles.
+
+## Creating Circle Art With Python Turtle
+
+While we’re on the topic of using circles to create cool graphics we can again use these shapes for more creative computer art. Just like we did in the previous example, let's again create random circles of varying sizes. However, this time we’re going to give them any of the various random colors from the get_random_color  function in the `PyRandomColor`  module. The code for crafting this is listed below:
+
+    import turtle
+    from random_colors import get_random_color
+    from random import randint
+    
+    def create_color_circles(amount=500):
+        
+        cir = turtle.Turtle()
+        cir.speed(0)
+        quantity_circles = amount
+        length = cir.getscreen().window_width()
+        height = cir.getscreen().window_height()
+        for cycles in range(quantity_circles):
+            cir.penup()
+            x, y = randint(-length, length), randint(-height, height)
+            cir.goto(x, y)
+            cir.pendown()
+            rad = randint(5, 50)
+            cir.begin_fill()
+            cir.color(get_random_color())
+            cir.pendown()
+            cir.circle(rad)
+            cir.end_fill()
+        turtle.done()
+
+Here's the output:
+
+![Random Colored Circles](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/computer_graphics/images/random_color_circles.png)
+
+Now, let’s dig through the code. This function is similar to the code used to create the **Night** image. 
+
+However, there’s two simple tweaks. One, the circles are populated across the whole dimension of the user’s screen. This is accomplished by using the `getscreen` method which returns the `TurtleScreen` object that the turtle is drawing on. The width of the screen is stored in the length variable and the height is stored in the height variable. A loop is created that by default iterates over 500 and then repeatedly runs the steps of:
+
+-   Picking the pen up
+    
+-   Randomly sets the location of the circle by selecting a variable x within the range of -length to length, and a y variable in the range of negative height to height
+    
+-   Puts the circle at the location of the x and y variables
+    
+-   Places the pen down. No more squiggly lines!
+    
+-   Randomly sets the size of the radius of the circle within the range of 5 through 50 pixels
+    
+-   Calls the `begin_fill` method
+    
+-   Calls the `get_random_color` method from the `PyRandomColor`  module
+    
+-   Puts the pen down
+    
+-   Draws the circle with the rad radius
+    
+-   Calls the `end_fill` method
+    
+-   Calls `turtle.done()`
+
+Pretty cool stuff. Let’s continue riding the circle art bandwagon. Let’s ago ahead and create a simple _spirograph_ with a circle. Below is the code snippet for this:
+
+import turtle
+from random_colors import get_random_color
+
+    def create_circles(cycles=100):
+    
+        turtle.bgcolor('black')
+        turtle.pensize(3)       
+        turtle.speed(0)        
+        for i in range(cycles):
+            turtle.color(get_random_color())
+            turtle.circle(125)  
+            turtle.right(25)   
+        turtle.done()
+
+![Spirograph 1](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/computer_graphics/images/spirograph1.png)
+
+So we in essence create a screen with a black background and then use a for loop to iterate a predetermined amount of cycles. From there, we create the random colored circle, and then rotate the pen right 25 degrees. We can play with the angle rotation to see how much it effects the output. Also, if we wanted the circles to appear in a linear fashion instead of having them rotate then we can make a couple of adjustments. 
+
+One, we don’t need to rotate the circle after each cycle, but instead we need to move it forward by a predetermined amount. If we want to start the drawing at the area located furthest to the left then we can get the width of the screen. Inside of the Screen module is a function called window_width that allows you to get the width of the screen. It’s important that we take the negative of that value and then store it in a variable. We want it to be negative because just like with the x-y Cartesian coordinate system the negative value denotes to the left on the coordinate system. To get the  _left most_  portion of the screen we can do something like the following:
+
+    x = -(turtle.Screen().window_width())
