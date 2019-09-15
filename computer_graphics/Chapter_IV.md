@@ -150,7 +150,9 @@ Below is the output image:
 
 Note, since this uses randomized colors there’s a high probability that there will be some variance compared to the image you generate. This is why I think this so cool, every execution of the script will most likely generate something slightly different.
 
-Here's a quick explanation. To randomly fill in the inner and outer colors of a turtle object you need to do two things: use the color  function and then pass in the `get_random_color` method twice from the `random_colors` module.  Remember, when you specify two arguments the first one is the outer color while the second one is for the  inner color. To get the color to generate we need to include the `begin_fill` method call before the loop and the `end_fill`  after it.
+Here's a quick explanation. To randomly fill in the inner and outer colors of a turtle object you need to do two things: use the color  function and then pass in the `get_random_color` method twice from the `random_colors` module.  
+
+Remember, when you specify two arguments the first one is the outer color while the second one is for the  inner color. To get the color to generate we need to include the `begin_fill` method call before the loop and the `end_fill`  after it.
 
 Here’s some more examples of the things you can do with `PyRandomColor` so that you’ll have inspiration:
 
@@ -381,3 +383,261 @@ So we in essence create a screen with a black background and then use a for loop
 One, we don’t need to rotate the circle after each cycle, but instead we need to move it forward by a predetermined amount. If we want to start the drawing at the area located furthest to the left then we can get the width of the screen. Inside of the Screen module is a function called window_width that allows you to get the width of the screen. It’s important that we take the negative of that value and then store it in a variable. We want it to be negative because just like with the x-y Cartesian coordinate system the negative value denotes to the left on the coordinate system. To get the  _left most_  portion of the screen we can do something like the following:
 
     x = -(turtle.Screen().window_width())
+
+Then, after each iteration we can update the x value and then move the turtle pen to the new location using the `penup`, `pendown`, and `goto` methods. Below is the updated code snippet:
+
+    import turtle
+    from random_colors import get_random_color
+    def create_circles(cycles=30):
+       
+        turtle.bgcolor('black')
+        turtle.pensize(3)      
+        turtle.speed(0)        
+        x = -(turtle.Screen().window_width())
+        for i in range(cycles):
+            turtle.penup()
+            turtle.goto(x, 0)
+            turtle.pendown()
+            turtle.color(get_random_color())
+            turtle.circle(100)  
+            x += 50
+        turtle.done()
+
+
+[insert Circle Art]
+
+## Creating Party Lights and Delicious Fruit Candy Pieces With Simple Lines
+
+To create a line in python all you have to do is just move forward with the turtle object. You could also optionally add width to the pen so that the line will have more _thickness_. For example, the following code consists of several lines that rotates 45 degrees each iteration around the origin and kind of mimics a snow flake as shown below:
+
+[Insert ## **Image: Lines**]
+
+Here’s the code snippet for doing this:
+
+    import turtle
+    line = turtle.Turtle()
+    line.hideturtle()
+    line.pensize(3)
+    for x in range(8):
+        line.forward(200)
+        line.goto(0, 0)
+        line.left(45)
+    turtle.done()
+
+Since we now know how to create lines the next thing to do is to create some computer artwork with them using turtle baby! Let’s do something cool by following this simple algorithm:
+
+-   Generate many lines
+    
+-   Use the `PyRandomColor`  module to randomly color each line
+    
+-   Add some thickness to the lines
+    
+-   Randomly allocate the x/y coordinates of each line
+
+So, pretty much more of the same stuff that we saw previously. Below is how the image looks:
+
+[**Image: Party Lights**]
+
+Below is the code for this which is similar to the code used to create the **Nigh**t and **Random Colored Circles**:
+
+    from random_colors import get_random_color
+    from random import randint
+    def create_lights(number=70, angle=20):
+        width = turtle.Screen().window_width()
+        height = turtle.Screen().window_height()
+        screen = turtle.Screen()
+        screen.bgcolor('black')
+        screen.screensize(width, height)
+        turn = angle
+        lights = turtle.Turtle()
+        lights.speed(0)
+        lights.hideturtle()
+        for x in range(number):
+            x, y = randint(-height, height), randint(-width, width)
+            lights.pensize(12)
+            lights.pencolor(get_random_color())
+            lights.right(turn)
+            lights.forward(250)
+            lights.penup()
+            lights.goto(x, y)
+            lights.pendown()
+        turtle.done()
+
+There’s no new logic in the code, the only thing you haven’t seen yet is how to control the thickness of the lines. This can be done by calling the `pensize` method. 
+
+We can in essence take the above logic and manipulate the image slightly by modifying the `pensize`, aka thickness and the forward function, aka length of the line. Here’s how the modified loop portion of **Party Lights**  look:
+
+    for x in range(number):
+        x, y = randint(-height, height), randint(-width, width)
+        lights.pensize(30)
+        lights.pencolor(get_random_color())
+        lights.right(turn)
+        lights.forward(75)
+        lights.penup()
+        lights.goto(x, y)
+        lights.pendown()
+
+Here’s the generated image:
+
+[**Image: Candies**]
+
+Same logic, just a couple of tweaks to the pensize and forward methods.
+
+## Project: 4 Little Turtles Racing Game
+
+Let’s put our newfound knowledge of the turtle module to the test and build ourselves a simple little game. This game is called _4 Little Turtles_ and it’s actually more of a simulator than a game, but yet we can still get a ton of entertainment from this. Below are the rules to the 4 Little Turtles:
+
+ - [ ] Create a game that consists of 4 little turtles of unique colors.
+ - [ ] Include a countdown that starts the game.
+ - [ ] Create a graphical finish line with the text “Finish Line” directly above it.
+ - [ ] Randomly generate the speed of the turtles.
+ - [ ] Write an algorithm to accurately determine which turtle crossed the finish line first.
+ - [ ] Write a message to let the user know which turtle won.
+ - [ ] Write a simple algorithm to make the winning turtle spin and then grow in size afterwards.
+ - [ ] Have fun playing and showing the game off to your friends and family!
+ 
+ Below are some screenshots of how the game looks:
+
+![4 Little Turtles Screenshot 1](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/computer_graphics/images/4_little_turtles_racing_1.png)
+
+![4 Little Turtles 2](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/computer_graphics/images/4_little_turtles_racing_2.png)
+
+![4 Little Turtles 3](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/computer_graphics/images/4_little_turtles_racing_3.png)
+
+
+![4 Little Turtles 4](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/computer_graphics/images/4_little_turtles_racing_4.png)
+
+## Script Hint
+
+  
+Compared to the other programs we created so far I felt that this program would fair better by using the _object oriented_ approach in python. I felt like it would make the program cleaner, more modular, and easier to extend when needed. Below is the list of methods that’s used in the script:
+
+`__init__`: The constructor which creates the four turtle objects along with getting the height and width of the screen.
+
+`start_turtles`: Sets the default positions of the turtles.
+
+`finish_line`: Draws the finish line in the racing game and aligns it on the right hand portion of the screen.
+
+`countdown_timer`: Creates the countdown timer for the script starting at 5. Use the sleep function from the time module to pause the program.
+
+ `set_turtle_speeds`: Randomly sets the speed of the turtles within the range of 1-25.
+
+`turtle_race`: Contains the logic that gets the turtles to start moving towards the finish line.
+
+`victor_dance`: Contains the logic that gets the winning turtle to do a celebratory dance after they win and then grow in size.
+
+`if __name__ == '__main__':` We need to figure out a way to start the game. I’ve decided to use this approach.  It can be used for larger projects to define a starting point of execution of the project. Python doesn’t have an official main method like in C or Java. This is one way in which you can control the flow of execution of a script.
+
+## Solution
+
+  
+We can break down the solution of the script down by analyzing the methods. We’ll start at the top and work our way to the bottom. Let’s start with the class declaration and then the constructor or `__init__` method:
+
+    import turtle
+    from random import choice
+    from time import sleep
+    class TurtleRace:
+    
+        def __init__(self):
+            
+            self.red = turtle.Turtle(shape='turtle')
+            self.blue = turtle.Turtle(shape='turtle')
+            self.green = turtle.Turtle(shape='turtle')
+            self.black = turtle.Turtle(shape='turtle')
+            self.height = turtle.Screen().window_height()
+            self.width = -turtle.Screen().window_width() 
+            
+            self.red_x = self.width + (-self.width/10)
+            self.blue_x = self.width + (-self.width/10)
+            self.green_x = self.width + (-self.width/10)
+            self.black_x = self.width + (-self.width/10)
+    
+            self.red_y = self.height - (self.height / 1.20)
+            self.blue_y = self.height - (self.height / 1.1)
+            self.green_y = self.height - (self.height / 1)
+            self.black_y = self.height - (self.height / .9)
+            
+            self.red_speed = 0
+            self.blue_speed = 0
+            self.green_speed = 0
+            self.black_speed = 0
+            self.finish = turtle.Turtle()
+
+Then, after each iteration we can update the x value and then move the turtle pen to the new location using the penup, pendown, and goto methods. Below is the updated code snippet:
+
+    import turtle
+    from random_colors import get_random_color
+    def create_circles(cycles=30):
+       
+        turtle.bgcolor('black')
+        turtle.pensize(3)      
+        turtle.speed(0)        
+        x = -(turtle.Screen().window_width())
+        for i in range(cycles):
+            turtle.penup()
+            turtle.goto(x, 0)
+            turtle.pendown()
+            turtle.color(get_random_color())
+            turtle.circle(100)  
+            x += 50
+        turtle.done()
+
+![Circle Art](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/computer_graphics/images/circle_art.png)
+
+## Creating Party Lights and Delicious Fruit Candy Pieces With Simple Lines
+
+To create a line in python all you have to do is just move forward with the turtle object. You could also optionally add width to the pen so that the line will have more _thickness_. For example, the following code consists of several lines that rotates 45 degrees each iteration around the origin and kind of mimics a snow flake as shown below:
+
+![Snow flake image](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/computer_graphics/images/snow_flake.png)
+
+#Here's the code snippet for doing this:
+
+    import turtle
+    line = turtle.Turtle()
+    line.hideturtle()
+    line.pensize(3)
+    for x in range(8):
+        line.forward(200)
+        line.goto(0, 0)
+        line.left(45)
+    turtle.done()
+
+Since we now know how to create lines the next thing to do is to create some computer artwork with them using turtle baby! Let’s do something cool by following this simple algorithm:
+
+-   Generate many lines
+-   Use the PyRandomColor  module to randomly color each line
+-   Add some thickness to the lines
+-   Randomly allocate the x/y coordinates of each line
+    
+So, pretty much more of the same stuff that we saw previously. Below is how the image looks:
+
+![party lights](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/computer_graphics/images/party_lights.png)
+
+Below is the code for this which is similar to the code used to create the **Nigh**t and **Random Colored Circles**
+
+    import turtle
+    from random_colors import get_random_color
+    from random import randint
+    def create_lights(number=70, angle=20):
+        width = turtle.Screen().window_width()
+        height = turtle.Screen().window_height()
+        screen = turtle.Screen()
+        screen.bgcolor('black')
+        screen.screensize(width, height)
+        turn = angle
+        lights = turtle.Turtle()
+        lights.speed(0)
+        lights.hideturtle()
+        for x in range(number):
+            x, y = randint(-height, height), randint(-width, width)
+            lights.pensize(12)
+            lights.pencolor(get_random_color())
+            lights.right(turn)
+            lights.forward(250)
+            lights.penup()
+            lights.goto(x, y)
+            lights.pendown()
+        turtle.done()
+
+There’s no new logic in the code, the only thing you haven’t seen yet is how to control the thickness of the lines. This can be done by calling the pensize method. 
+We can in essence take the above logic and manipulate the image slightly by modifying the pensize, aka thickness and the forward function, aka length of the line. Here’s how the modified loop portion of **Party Lights**  look:
