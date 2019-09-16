@@ -463,8 +463,22 @@ Below is the code for this which is similar to the code used to create the **Nig
         turtle.done()
 
 There’s no new logic in the code, the only thing you haven’t seen yet is how to control the thickness of the lines. This can be done by calling the pensize method. 
-We can in essence take the above logic and manipulate the image slightly by modifying the pensize, aka thickness and the forward function, aka length of the line. Here’s how the modified loop portion of **Party Lights**  look:
 
+We can in essence take the above logic and manipulate the image slightly by modifying the pensize, aka thickness and the forward function, aka length of the line. Here's how the modified loop portion of **Party Lights**  look:
+
+    for x in range(number):
+        x, y = randint(-height, height), randint(-width, width)
+        lights.pensize(30)
+        lights.pencolor(get_random_color())
+        lights.right(turn)
+        lights.forward(75)
+        lights.penup()
+        lights.goto(x, y)
+        lights.pendown()
+    
+Here's how the output image looks: 
+
+![candies](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/computer_graphics/images/candies.png)
 
 
 
