@@ -791,12 +791,9 @@ The last portion of the code is to just execute all of the methods. The order do
         race.victor_dance()
         turtle.done()
 
-That’s all there is to The _4 Little Turtles_ game.
+That's all there is to The _4 Little Turtles_ game.
 
 You can download the complete script from GitHub here:  **[insert link]**
 
-What cool interesting things have you created with the turtle module? Post on social media about it
-
-with the hashtag: #turtlecoderocks
-Chapter
+What cool interesting things have you created with the turtle module? Post on social media about it with the hashtag: #turtlecoderocks
 
