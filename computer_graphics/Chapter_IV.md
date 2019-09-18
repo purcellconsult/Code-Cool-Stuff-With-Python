@@ -1,3 +1,4 @@
+
 # **Chapter IV: Crafting Catchy Computer Art with Python Turtle**
 
 
@@ -562,4 +563,240 @@ We can break down the solution of the script down by analyzing the methods. We�
             self.green_speed = 0
             self.black_speed = 0
             self.finish = turtle.Turtle()
+
+The `__init__` method which acts as the constructor is used to create and initialize the variables that will be used throughout the program. The variables created within the `__init__` method are prefaced with the self convention and belong to the object instance. These types of variables are known as **instance variables**  and are included within the methods of a class.
+
+The variables are made to represent each color of turtle. The dimensions of the screen is captured and stored in the height and width variables. Since many computer screens come in various dimensions the actual value of height and width are contingent on the screen that the user is on. The way to get these variables in turtle is to use the `window_height` and `window_width` methods.
+
+Next, the starting positions of the turtles are set. The x starting positions are set equal to the width plus `-self.width/10`.
+
+This seems like an odd computation, but without adding extra pixels to the width the turtle won’t be on the screen! I’ve decided to add `-self.width/10` to it so that hopefully it scales graceful across various computer screens. All of the turtles start the race off at the exact x coordinate.
+
+It’s important to note that the width of the screen will be a positive number like 600. However, since we want the turtle to start furthest to the left, then what we need is to make sure that the width is negative. That’s done in this code snippet here:
+
+    self.width = -turtle.Screen().window_width()
+
+The same logic is used to create the y position of the turtles, but instead we get the height of the screen.
+
+The speeds of the turtles are initially set to 0, and the `finish` variable is created which will control the positioning and creation of the finish line graphic.
+
+ There will be more variables created later on but the variables declared within the constructor will be manipulated by other methods; the variables created later will only be used locally.
+
+  
+Now that we got the positioning of the turtles right, the next step is to go ahead and set them up. Here’s the code for this:
+
+    def start_turtles(self):
+       
+        self.red.penup()
+        self.red.color('red')
+        self.red.goto(self.red_x, self.red_y)
+        self.red.pendown()
+    
+        self.blue.penup()
+        self.blue.color('blue')
+        self.blue.goto(self.blue_x, self.blue_y)
+        self.blue.pendown()
+    
+        self.green.penup()
+        self.green.color('green')
+        self.green.goto(self.green_x, self.green_y)
+        self.green.pendown()
+    
+        self.black.penup()
+        self.black.color('black')
+        self.black.goto(self.black_x, self.black_y)
+        self.black.pendown()
+
+The turtle color is defined and then it's moved to its default location on the screen using the `goto` method. Let’s move on to the portion of the code that shows how to position 
+and draw the finish line.
+
+     def finish_line(self):
+     
+        self.finish.hideturtle()
+        self.finish.speed(0)  
+        self.finish.pensize(7)
+        self.finish.hideturtle()
+        self.finish.penup()
+        self.finish.goto(-self.width / 2, self.height / 3)
+        self.finish.pendown()
+        self.finish.right(90)
+    
+        for cycles in range(30):
+            self.finish.forward(cycles)
+       
+        self.finish.penup()
+        self.width = int(self.width / 2.4)
+        self.finish.goto(-self.width, self.height / 2)
+        self.finish.pendown()
+        self.finish.write('Finish Line!', font=('Verdana', 13))
+
+The only somewhat tricky part is figuring on the correct x/y values to set the line at. I used the width and height of the screen as a reference point, and then scaled it by dividing by an integer. Let’s investigate this portion of the code here:
+
+    self.width = int(self.width / 2.4)
+    
+    self.finish.goto(-self.width, self.height / 2)
+
+What's happening is that the width is being divided, and then as you can see the x portion has a negative symbol in front of it. Since the default value of the width is negative (was set this way in the constructor), when another negative is added in front of it then it becomes positive.
+
+The for loop creates the finish line which is simply a line that’s moved forward and then rotated to the right 90 degrees so that it’s vertical. To increase the thickness of the line just increase the value that’s passed into the `pensize` method.
+
+In order to get turtle object to write text above the finish line we simply use the same x value, but we divide the height by a smaller number so that the text will appear above the line instead of overlapping with it.
+
+Below is the code snippet that modifies the font face:
+
+    self.finish.write('Finish Line!', font=('Verdana', 13))
+
+You can modify the tuple to change the font face and size.
+
+Now, let’s inspect the logic for creating the countdown script for the game:
+
+    def countdown_timer(self):
+    
+        secs = 5
+        while secs > 0:
+            message.write(secs, font=('Verdana', 50))
+            secs -= 1
+            sleep(1)
+            message.clear()
+
+I've decided to countdown the game starting at 5, but you can of course increase this number to something bigger or smaller if desired. Since the game counts down a total of 5 seconds, the loop will cycle 5 times and during each iteration the `sleep` function is called; the 1 pauses the program for one second. Since the condition is `while secs > 0`, make sure to decrement the counter by 1 each cycle so that it will indeed reach 0. The next step is to randomly set the speeds of the turtles:
+
+    def set_turtle_speeds(self):
+      
+     speeds = [gait for gait in range(1, 25)]
+     self.red_speed = choice(speeds)
+     self.blue_speed = choice(speeds)
+     self.green_speed = choice(speeds)
+     self.black_speed = choice(speeds)
+
+To make this game unpredictable the turtles will be randomly assigned a speed from 1 to 25. A turtle that gets assigned a low speed like 1 will truly mimic a turtle in real life!
+
+Let’s next dig into the logic required to make the turtle race and then determine the actual winner. Below is the beginning snippet for this:
+
+    def turtle_race(self):
+      
+        race_on = True
+        while race_on:
+            if self.red.pos()[0] >= self.finish.pos()[0]:
+                if self.blue.pos()[0] >= self.finish.pos()[0] and self.blue.pos()[0] > self.red.pos()[0]:
+                    self.finish.penup()
+                    self.finish.goto(-self.width, self.height / 2.9)
+                    self.finish.pendown()
+                    self.finish.write('Blue Wins!', font=('Verdana', 13))
+                    race_on = False
+                    return self.blue
+                elif self.green.pos()[0] >= self.finish.pos()[0] and self.green.pos()[0] > self.red.pos()[0] :
+                    self.finish.penup()
+                    self.finish.goto(-self.width, self.height / 2.9)
+                    self.finish.pendown()
+                    self.finish.write('Green Wins!', font=('Verdana', 13))
+                    race_on = False
+                    return self.green
+                elif self.black.pos()[0] >= self.finish.pos()[0] and self.black.pos()[0] > self.red.pos()[0]:
+                    self.finish.penup()
+                    self.finish.goto(-self.width, self.height / 2.9)
+                    self.finish.pendown()
+                    self.finish.write('Black Wins!', font=('Verdana', 13))
+                    race_on = False
+                    return self.black
+                self.red.forward(25)
+                self.finish.penup()
+                self.finish.goto(-self.width, self.height / 2.9)
+                self.finish.pendown()
+                self.finish.write('Red Wins!', font=('Verdana', 13))
+                race_on = False
+                return self.red
+                
+In this code snippet the method is defined and a while loop is created with the flag `race_on` which is initially set to `True`. The while loop will keep cycling indefinitely until race_on is set to `False` which happens when the winning turtle crossed the finish line. The next question is how do we determine that?
+
+Every turtle object that we’ve drawn up until this point has an x and y position, just like on the Cartesian Coordinate system. We can access the current x or y value of a turtle object by invoking the `pos` method. So, if we want the current x value of the red turtle we can do this:
+
+    self.red.pos()[0] 
+
+If we want the y position of the red turtle we can do that:
+
+    self.red.pos()[1]
+
+However, we need something to compare it to. Since we want to know which turtle won we should compare the current x value of each turtle to the x value of the finish line. That’s where this snippet of code comes in handy:
+
+
+    if self.red.pos()[0] >= self.finish.pos()[0]:
+
+At the end of each iteration we need to progress the turtles forward which we can accomplish by using the following code snippet:
+
+
+    self.red.forward(self.red_speed)
+    self.blue.forward(self.blue_speed)
+    self.green.forward(self.green_speed)
+    self.black.forward(self.black_speed)
+
+  
+You would think that this is all we needed to determine the winning turtle but there’s something we’re missing. For example, let’s assume that the red turtle speed was 20, and let’s also assume that the red turtle has crossed the finish line. While the red turtle may indeed cross the finish line, there’s a couple of edge cases we need to check. In order to fully crown Mr. or Mrs. Red Turtle the winner, we need to check that the other three turtles don’t have a speed that’s greater than 20.
+
+If they do, then what could happen is that our program has a bug in it because the red turtle could be declared the winner when it doesn’t actually have the highest speed.
+
+Let’s still assume that the red turtle again has a speed of 20, and let’s assume that the blue turtle has a speed of 22. The speeds are really close, and if we don’t add some type of conditional check then what could happen is that the red turtle could be declared the winner simply because it’s placement in code comes before that of the blue turtle.
+
+That’s where those nested conditional checks come into play. For example, let’s analyze this code snippet:
+
+    if self.red.pos()[0] >= self.finish.pos()[0]:
+        if self.blue.pos()[0] >= self.finish.pos()[0] and self.blue.pos()[0] > self.red.pos()[0]:
+
+_What this says in English is if the x value of the red turtle is greater than the x value of the finish line; and if the position of the blue turtle is greater than the x value of the finish line and the x position of the blue turtle is greater than the x position of the red turtle then…_
+
+ The code that comes afterwards positions the pen above the finish line, sets `race_on` to `False` which makes the while loop stops, and then returns the blue turtle. We need to return the winning turtle as that decides the victory dance which logic will be described next. However, we need to do these conditional checks for the green and black turtle since the red turtle appears first in the code. Only after those checks are done is it safe for us to assume that the red turtle is indeed the winning turtle.
+
+At this point I also decided to include `forward(25)` on all of the winning turtles so that it will look like they sprint pass the finish line like in a n actual track race.
+
+Similar logic applies to the blue, green, and black turtles with the exception that they need to check the turtles that come before them in the code. That’s the logic to start the turtles off racing and to ensure that the turtle with the fastest speed is crowned the winner.
+
+The next snippet of code shows the logic on how to make the turtle do it’s silly spin dance and then make it grow in size afterwards:
+
+def victor_dance(self):
+   
+    if self.turtle_race() == self.red:
+        for x in range(50):
+            self.red.right(90)
+        self.red.shapesize(10, 10)
+        return
+    elif self.turtle_race() == self.blue:
+        for x in range(50):
+            self.blue.right(29)
+        self.blue.shapesize(10, 10)
+        return
+    elif self.turtle_race() == self.green:
+        for x in range(50):
+            self.green.right(30)
+        self.green.shapesize(10, 10)
+        return
+    elif self.turtle_race() == self.black:
+        for x in range(15):
+            self.black.right(90)
+        self.black.shapesize(10, 10)
+        return
+
+As you can see it;s simply a for loop that cycles a variable number of times and then rotate the turtle to the right a variable number of degrees. At the end of the iteration the `shapesize` method is invoked which allows the change in dimensions of the turtle. The first parameter coincides with the stretch width while the second parameter coincides with the stretch length.
+
+The last portion of the code is to just execute all of the methods. The order does matter because we don’t want to call a method that’s trying to access an object that doesn’t exist. Below is the code for this:
+
+    if __name__ == '__main__':
+        message = turtle.Turtle()
+        message.hideturtle()
+        race = TurtleRace()
+        race.start_turtles()
+        race.finish_line()
+        race.countdown_timer()
+        race.set_turtle_speeds()
+        race.turtle_race()
+        race.victor_dance()
+        turtle.done()
+
+That’s all there is to The _4 Little Turtles_ game.
+
+You can download the complete script from GitHub here:  **[insert link]**
+
+What cool interesting things have you created with the turtle module? Post on social media about it
+
+with the hashtag: #turtlecoderocks
+Chapter
 
