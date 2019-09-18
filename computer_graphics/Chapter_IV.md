@@ -752,28 +752,28 @@ Similar logic applies to the blue, green, and black turtles with the exception t
 
 The next snippet of code shows the logic on how to make the turtle do it’s silly spin dance and then make it grow in size afterwards:
 
-def victor_dance(self):
-   
-    if self.turtle_race() == self.red:
-        for x in range(50):
-            self.red.right(90)
-        self.red.shapesize(10, 10)
-        return
-    elif self.turtle_race() == self.blue:
-        for x in range(50):
-            self.blue.right(29)
-        self.blue.shapesize(10, 10)
-        return
-    elif self.turtle_race() == self.green:
-        for x in range(50):
-            self.green.right(30)
-        self.green.shapesize(10, 10)
-        return
-    elif self.turtle_race() == self.black:
-        for x in range(15):
-            self.black.right(90)
-        self.black.shapesize(10, 10)
-        return
+    def victor_dance(self):
+       
+        if self.turtle_race() == self.red:
+            for x in range(50):
+                self.red.right(90)
+            self.red.shapesize(10, 10)
+            return
+        elif self.turtle_race() == self.blue:
+            for x in range(50):
+                self.blue.right(29)
+            self.blue.shapesize(10, 10)
+            return
+        elif self.turtle_race() == self.green:
+            for x in range(50):
+                self.green.right(30)
+            self.green.shapesize(10, 10)
+            return
+        elif self.turtle_race() == self.black:
+            for x in range(15):
+                self.black.right(90)
+            self.black.shapesize(10, 10)
+            return
 
 As you can see it;s simply a for loop that cycles a variable number of times and then rotate the turtle to the right a variable number of degrees. At the end of the iteration the `shapesize` method is invoked which allows the change in dimensions of the turtle. The first parameter coincides with the stretch width while the second parameter coincides with the stretch length.
 
