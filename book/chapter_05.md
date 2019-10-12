@@ -22,7 +22,6 @@ Here’s the output:
 
 ![simple tkinter gui](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/images/ch_05/Simple_Tkinter_GUI.jpg)
     
-*Image: Simple Tkinter GUI*  
   
 Woohoo, you've created your first Tkinter app! While this app doesn’t do anything useful it does illustrate some key concepts with Tkinter.  
 
@@ -154,14 +153,12 @@ On to the `Button` widget. Below is an example that not only shows how to create
 The following screenshots illustrates how the GUI works:  
   
 ![greetings app 1](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/images/ch_05/Greetings_app_1.jpg)
-
-*Image: Greetings app 1.*  
   
   
 Here's the sample output:  
   
 ![greetings app 2](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/images/ch_05/Greetings_app_2.jpg)
-Image: Greetings app 2.  
+
   
 As again, not a ground shattering app but it does its job with providing insights into the possibilities of Tkinter. There's a couple of more things that we should understand until we move onto more advanced Tkinter apps.  
   
@@ -210,8 +207,6 @@ Here's the output:
 
 ![pack geometry manager](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/images/ch_05/pack_geometry_manager.jpg)
   
-*Image: Pack Geometry Manager.*  
-  
 As you can see from the above code snippet, the position of the labels are automatically determined. Nothing new added from this code snippet that you haven’t seen before except for the background colors in the labels. Next is an example of the place geometry layout manager.  
   
 ## Place ##  
@@ -233,7 +228,7 @@ The place layout manager allows you to do absolute and relative positioning with
 
   
   ![place geometry manager](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/images/ch_05/place_geometry_example.jpg)
-Image: Place Geometry Example.  
+
   
 ## Grid ##  
   
@@ -257,7 +252,6 @@ The last layout manager to explain is the grid. It organizes components of the G
 Here's how the GUI looks:  
   
   ![grid layout manager](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/images/ch_05/grid_layout_manager_example.jpg)
-*Example: grid layout manager example.*  
   
   
 Before we move on there’s something that I want to get off my chest. I think it's time that we outta convert our procedural GUI programs into their OOP counterparts.  
@@ -294,7 +288,6 @@ Here's a screenshot of how the app looks:
 
 ![temperature converter gui](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/images/ch_05/temperature_converter_gui.jpg)
   
-*Image: Temperature Converter GUI.*  
   
 ## Script Hint  
   
@@ -500,7 +493,6 @@ The `Labels`, `Entry`, and `Button` widgets are created here. Let’s focus on t
 
 ![bmi weight status labels](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/images/ch_05/bmi_weight_status_labels.jpg)
 
- *Image: BMI Weight Status Labels.* 
 
 These are simply labels that corresponds to this portion of the code:
 
@@ -767,9 +759,6 @@ The above are just the variables that will be manipulated throughout the program
 The `Labels`, `Entry`, and `Button` widgets are created here. Let's focus on the config method; it's called on the `Entry` widgets and allows you to set the background color of that widget. Let's inspect this portion of the GUI:  
   
   
-Image: BMI Weight Status Labels.  
-  
-  
 These are simply labels that corresponds to this portion of the code:  
 
     Label(bg='black', fg='white', text='BMI Weight Status').place(x=325, y=80)
@@ -824,14 +813,7 @@ Access the full program here: [insert link]
 ## Project: The Secret Number Game ##  
   
 We want to create a classic number guessing game in which the player in essence plays against the computer. Given a range of possible numbers from 1-100 we can create a game. Here's some screenshots from that game:  
-  
-  
-Image. Guessing Game 1.  
-  
-Image: Guessing Game 2.  
-  
-Image: Guessing Game 3.  
-  
+ 
 The above screenshots in a nutshell shows how this game works. But, here are the rules just in case:  
   
 1. The program will randomly generate a secret number from 1...100.  
