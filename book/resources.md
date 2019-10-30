@@ -89,7 +89,7 @@ PyRandomColor Module: [https://github.com/purcellconsult/PyRandomColor](https://
 -----------
 
 
-# Chapter V: Building Practical Desktop apps in Python Using the Core Tkinter Library  #
+## Chapter V: Building Practical Desktop apps in Python Using the Core Tkinter Library  #
 
 Online resource for Tkinter: [http://effbot.org/tkinterbook/label.htm](http://effbot.org/tkinterbook/label.htm)
 
