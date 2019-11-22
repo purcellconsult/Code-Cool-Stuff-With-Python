@@ -1,8 +1,9 @@
 # Code Cool Stuff With Python
 
-![Code Cool Stuff With Python Ecover](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/images/book/ccswp_ebook_cover.jpg)
+😎🎉  🎈 Welcome to the _Code Cool Stuff with Python_ online community :-). 🙂🎉🎈
 
-😎🎉 🎈 Welcome to the *Code Cool Stuff with Python* online community :-). 🙂🎉🎈
+![Code Cool Stuff With Python Ecover](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/images/book/ccswp_ebook_cover.jpg#center)
+
 
 Forget boring theory and annoying quizzes that are made ONLY for academia. Let’s learn how to build cool stuff with python that impress your friends and get you hired. By the time you’re done you’ll build 12 REAL PROJECTS that force you to master the fundamentals of python while having fun to boot. So, be prepared to…
 
@@ -25,6 +26,9 @@ Here's a taste of some of the fun programs you’ll build…
 ![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/turtle/party-lights-demo.gif)
 
 ![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/turtle/spirograph.gif)
+
+![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/gui/temperature_converter.mp4)
+
 
 The code examples in this book are written for Python 3.X. 
 
