@@ -17,8 +17,6 @@ Here's a taste of some of the fun programs you’ll build…
 
 ![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/turtle/circle_art_demo.gif)
 
-![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/turtle/circle_turtle_demo.gif)
-
 ![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/turtle/mike_and_ike_candies.gif)
 
 ![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/turtle/night_sky.gif)
@@ -85,8 +83,24 @@ This version of *Code Cool Stuff with Python* is released under the Creative Com
 4)	I’m also on Pateron: https://www.patreon.com/user?u=27110659
 5)	If you see me in public I accept big envelopes of cash:-D. 
 
+## Have a Tech Related Slack Channel Or a Tech Focused Online Community?  I Would Love to Support 
+
+I like collaborating with organizations that are passionate in tech. I endorse STEM education, lifelong learning, diversity, and equality. I would love to get a channel dedicated on your slack for Code Cool Stuff with Python. Of course I’ll pop up every now and then to answer questions, and will even be willing to schedule a live Q & A session on the channel. If interested, send me an email with details of your Slack Channel here: purcellconsult@gmail.com 
+
+## Business Related Inquiries 
+
+
+- If you’re affiliated with a software company, school, or library, and would like to order 100+ copies of Code Cool Stuff With Python. 
+- If you would like to license Code Cool Stuff with Python.
+- If you need a python workshop organized. 
+- If you need a keynote or technical talk for a conference.
+
+Send me a concise email with a self explanatory subject: purcellconsult@gmail.com
+
+
 ## License and Copyright
 
 The materials herein are all © 2019-2020 Doug Purcell.
 
+![enter image description here](https://upload.wikimedia.org/wikipedia/commons/9/99/Cc-by-nc_icon.svg)
 The content in this repo is released under the [Creative Commons 3.0](spurce) Noncommercial License so feel free to organize a meetup or teach a class based off this material.  
