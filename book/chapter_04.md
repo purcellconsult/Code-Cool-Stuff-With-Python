@@ -795,6 +795,6 @@ The last portion of the code is to just execute all of the methods. The order do
 
 That’s all there is to The _4 Little Turtles_ game.
 
-You can download the complete script from GitHub here:  **[insert link]**
+You can download the complete script from GitHub here:  [https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/sourcecode/ch_04/turtle_racing_game.py](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/sourcecode/ch_04/turtle_racing_game.py)
 
 What cool interesting things have you created with the turtle module? Post on social media about it with the hashtag: *#turtlecoderocks*
