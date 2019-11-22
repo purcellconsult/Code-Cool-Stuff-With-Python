@@ -103,4 +103,5 @@ Send me a concise email with a self explanatory subject: purcellconsult@gmail.co
 The materials herein are all © 2019-2020 Doug Purcell.
 
 ![enter image description here](https://upload.wikimedia.org/wikipedia/commons/9/99/Cc-by-nc_icon.svg)
-The content in this repo is released under the [Creative Commons 3.0](spurce) Noncommercial License so feel free to organize a meetup or teach a class based off this material.  
+
+The content in this repo is released under the [Creative Commons 3.0](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/CODE_OF_CONDUCT.md) Noncommercial License so feel free to organize a meetup or teach a class based off this material.  

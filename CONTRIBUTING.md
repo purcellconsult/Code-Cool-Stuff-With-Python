@@ -1,3 +1,4 @@
+
 ## CONTRIBUTING 
 
 We would love to have you contribute to the *Code Cool Stuff with Python* project! All levels are welcome because the more eyes on a project typically mean better quality. 
@@ -28,4 +29,4 @@ Here are some ideas to get you started with contributing to the Code Cool Stuff 
 
 Never contributed to an open source project before? Here’s a [succinct guide](https://gist.github.com/MarcDiethelm/7303312) on how to get started. 
 
-Make sure to read the [code of conduct](code_of_conduct) before contributing to the Code Cool Stuff with Python project. 
+Make sure to read the [code of conduct](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/CODE_OF_CONDUCT.md) before contributing to the Code Cool Stuff with Python project. 
