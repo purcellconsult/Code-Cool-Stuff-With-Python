@@ -16,3 +16,4 @@ Translating a book is a large project, so you’re more than welcome to break th
 If someone has already started a translation project and you would like to contribute then go to the project page, open up an issue, and ask how you can contribute. Ideally, multiple translators can work on a single translation project in an organized state.  
 
 
+
