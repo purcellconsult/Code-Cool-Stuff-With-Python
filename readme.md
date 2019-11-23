@@ -4,16 +4,18 @@
 
 ![Code Cool Stuff With Python Ecover](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/images/book/ccswp_ebook_cover.jpg#center)
 
-
 Forget boring theory and annoying quizzes that are made ONLY for academia. Let’s learn how to build cool stuff with python that impress your friends and get you hired. By the time you’re done you’ll build 12 REAL PROJECTS that force you to master the fundamentals of python while having fun to boot. So, be prepared to…
 
- - Have Fun Coding
- - Launch a Career as a Python Developer
- - Acquire a New Skill that lasts a lifetime
+ - Have fun coding
+ - Launch a career as a python developer
+ - Acquire a new skill that lasts a lifetime
 
 Here's a taste of some of the fun programs you’ll build…
 
+
 ![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/simple_images_with_turtle_collage.jpg)
+
+![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/turtle/4_little_turtles_demo.gif)
 
 ![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/turtle/circle_art_demo.gif)
 
@@ -25,7 +27,18 @@ Here's a taste of some of the fun programs you’ll build…
 
 ![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/turtle/spirograph.gif)
 
-![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/gui/temperature_converter.mp4)
+![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/cli/a_game_of_dice.gif)
+
+![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/cli/random_person_generator.gif)
+
+![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/gui/bmi_calculator.gif)
+
+![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/gui/temperature_converter.gif)
+
+
+![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/gui/secret_number_game_demo.gif)
+
+![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/gui/temperature_converter.gif)
 
 
 The code examples in this book are written for Python 3.X. 
@@ -34,7 +47,6 @@ The code examples in this book are written for Python 3.X.
 
 If you’re an educator that wants to promote STEM then I got ya covered. I've created slide decks and pdfs based off the content in the book that you can use as source material. Check out [EDUCATORS.md](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/EDUCATORS.md)
 
-![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/gui/bmi_calculator.mp4)
 
 ### A Quick start Guide
 
