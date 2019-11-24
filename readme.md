@@ -38,9 +38,6 @@ Here's a taste of some of the fun programs you’ll build…
 
 ![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/gui/secret_number_game_demo.gif)
 
-![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/gui/temperature_converter.gif)
-
-
 The code examples in this book are written for Python 3.X. 
 
 **Want to Contribute to an Open Source Project**? We would love to have you contribute to the project. There’s a plethora of ways to get involved from all skill sets, read [CONTRIBUTING.md](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/CONTRIBUTING.md) to get started today. 
