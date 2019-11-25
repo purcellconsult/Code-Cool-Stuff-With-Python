@@ -950,3 +950,6 @@ To start the GUI use the if __name__ == ‘__main__’ condition:
 
   
 And that’s all there is to the Secret Number Game GUI.
+
+
+## The best way to support this project is to [purchase a digital copy](https://www.amazon.com/Code-Cool-Stuff-Python-Purcell-ebook/dp/B081XJMNRB) on Amazon and leave a review. 

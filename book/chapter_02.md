@@ -537,3 +537,5 @@ See the complete source code of the Spanish translator script: [https://github.c
     
 In this chapter we learned how to start building some real-world practical programs. Converters and calculators are some basic programs that you can start writing that allows you to start solving real world problems. If you’ve built a couple of these scripts then this is something that you can show your friends and family to showcase your evolving python programming prowess!
 
+
+## The best way to support this project is to [purchase a digital copy](https://www.amazon.com/Code-Cool-Stuff-Python-Purcell-ebook/dp/B081XJMNRB) on Amazon and leave a review. 

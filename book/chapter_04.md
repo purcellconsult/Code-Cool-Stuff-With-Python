@@ -19,7 +19,6 @@ Below is the code for it:
     leonardo.shapesize(7.5, 7.5)
     leonardo.color('green')
     turtle.done()
-
   
 
 The first thing we need to do is import the turtle module so that we can use all of the builtin functionality. 
@@ -798,3 +797,5 @@ That’s all there is to The _4 Little Turtles_ game.
 You can download the complete script from GitHub here:  [https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/sourcecode/ch_04/turtle_racing_game.py](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/sourcecode/ch_04/turtle_racing_game.py)
 
 What cool interesting things have you created with the turtle module? Post on social media about it with the hashtag: *#turtlecoderocks*
+
+## The best way to support this project is to [purchase a digital copy](https://www.amazon.com/Code-Cool-Stuff-Python-Purcell-ebook/dp/B081XJMNRB) on Amazon and leave a review. 

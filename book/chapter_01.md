@@ -9,7 +9,7 @@ Just like python is renowned for it’s simplicity, the same can be said about i
 
 ## Install Python on Windows
 
-There’s a high probability that if you’re using a Windows powered machine that Python won’t be there by default. To discover if Python is indeed installed you can open up command prompt by typing _cmd_ in the search bar  followed by the word  _python_. If there  the python interpreter will run;  otherwise you’ll get an  annoying message like the following:
+There’s a high probability that if you’re using a Windows powered machine that Python won't be there by default. To discover if Python is indeed installed you can open up command prompt by typing _cmd_ in the search bar  followed by the word  _python_. If there  the python interpreter will run;  otherwise you’ll get an  annoying message like the following:
 
 *'python' is not recognized as an internal or external command, operable program or batch file*
 
@@ -857,4 +857,8 @@ Below is an example of a try/except/finally statement:
 This is in the finally statement
 </pre>
 
-The finally clause is executed before leaving the try statement. It’s always executed, no exceptions (no pun).
+The finally clause is executed before leaving the try statement. It's always executed, no exceptions (no pun).
+
+
+## The best way to support this project is to [purchase a digital copy](https://www.amazon.com/Code-Cool-Stuff-Python-Purcell-ebook/dp/B081XJMNRB) on Amazon and leave a review. 
+

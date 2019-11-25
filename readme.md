@@ -86,7 +86,7 @@ Secret Number Game | A fun guessing game in which the user guesses a number with
 ## How to Support 
 
 This version of *Code Cool Stuff with Python* is released under the Creative Commons 3.0 Noncommercial License.  It’s free here for a simple reason, to make the book widely accessible to as many people as possible. However, I do wish to profit off my work and there are several ways you can support this project. 
-1)	Purchase the digital or paperback edition of this book on Amazon AND leave a review. Reviews help consumers make inform purchasing decisions. Learn [how to leave reviews on Amazon](https://www.amazon.com/gp/help/customer/display.html?nodeId=201889700). 
+1)	Purchase the [digital](https://www.amazon.com/Code-Cool-Stuff-Python-Purcell-ebook/dp/B081XJMNRB) or paperback edition of this book on Amazon AND leave a review. Reviews help consumers make inform purchasing decisions. Learn [how to leave reviews on Amazon](https://www.amazon.com/gp/help/customer/display.html?nodeId=201889700). 
 2)	Make a donation, my PayPal email is: purcellconsult@gmail.com 
 3)	Sponsor me on GitHub, I offer several tiers: https://github.com/sponsors/purcellconsult 
 4)	I’m also on Pateron: https://www.patreon.com/user?u=27110659
