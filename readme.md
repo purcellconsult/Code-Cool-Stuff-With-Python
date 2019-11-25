@@ -10,10 +10,8 @@ Forget boring theory and annoying quizzes that are made ONLY for academia. Let�
  - Launch a career as a python developer
  - Acquire a new skill that lasts a lifetime
 
-Here's a taste of some of the fun programs you’ll build…
+Here's a taste of some of the fun programs you'll build…
 
-
-![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/simple_images_with_turtle_collage.jpg)
 
 ![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/turtle/4_little_turtles_demo.gif)
 
