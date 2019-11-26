@@ -12,29 +12,16 @@ Forget boring theory and annoying quizzes that are made ONLY for academia. Letâ€
 
 Here's a taste of some of the fun programs you'll buildâ€¦
 
-
 ![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/turtle/4_little_turtles_demo.gif)
 
-![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/turtle/circle_art_demo.gif)
-
-![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/turtle/mike_and_ike_candies.gif)
-
 ![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/turtle/night_sky.gif)
-
-![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/turtle/party-lights-demo.gif)
 
 ![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/turtle/spirograph.gif)
 
 ![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/cli/a_game_of_dice.gif)
 
-![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/cli/random_person_generator.gif)
-
 ![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/gui/bmi_calculator.gif)
 
-![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/gui/temperature_converter.gif)
-
-
-![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/gui/secret_number_game_demo.gif)
 
 The code examples in this book are written for Python 3.X. 
 
