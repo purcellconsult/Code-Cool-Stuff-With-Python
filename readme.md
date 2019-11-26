@@ -18,8 +18,6 @@ Here's a taste of some of the fun programs you'll build…
 
 ![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/turtle/spirograph.gif)
 
-![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/cli/a_game_of_dice.gif)
-
 ![enter image description here](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/demos/gui/bmi_calculator.gif)
 
 
