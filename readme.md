@@ -1,13 +1,8 @@
 # Code Cool Stuff With Python
 
-😎🎉  🎈 Welcome to the _Code Cool Stuff with Python_ online community :-). 🙂🎉🎈
-
 ![Code Cool Stuff With Python Ecover](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/images/book/ccswp_ebook_cover.jpg#center)
 
-Forget boring theory and annoying quizzes that are made ONLY for academia. Let’s learn how to build cool stuff with python that impress your friends and get you hired. By the time you’re done you’ll build 12 REAL PROJECTS that force you to master the fundamentals of python while having fun to boot. So, be prepared to…
-
- - Have fun coding
- - Launch a career as a python developer
+ Let's learn how to build cool stuff with python that impress your friends and get you hired. By the time you’re done you’ll build 12 REAL PROJECTS that force you to master the fundamentals of python while having fun to boot.
  - Acquire a new skill that lasts a lifetime
 
 Here's a taste of some of the fun programs you'll build…
@@ -25,17 +20,8 @@ The code examples in this book are written for Python 3.X.
 
 **Want to Contribute to an Open Source Project**? We would love to have you contribute to the project. There’s a plethora of ways to get involved from all skill sets, read [CONTRIBUTING.md](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/CONTRIBUTING.md) to get started today. 
 
-If you’re an educator that wants to promote STEM then I got ya covered. I've created slide decks and pdfs based off the content in the book that you can use as source material. Check out [EDUCATORS.md](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/EDUCATORS.md)
+If you're an educator that wants to promote STEM then I got ya covered. I've created slide decks and pdfs based off the content in the book that you can use as source material. Check out [EDUCATORS.md](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/EDUCATORS.md)
 
-
-### A Quick start Guide
-
-Below is a quick explanation of the directories in this repo along with a breakdown of all of the chapters in this book. 
-
- - **book**: Contains the textual content associated with the chapters in *Code Cool Stuff With Python* along with a resource file that represents all of the urls in the book.  
- - **media**: Contains the media files associated with the book such as the images, pdfs, and slide decks.
- - **source code**: Contains the code snippets and full solutions
-   to the projects.
 
 Here's a list of all the chapters in *Code Cool Stuff with Python*:
 
