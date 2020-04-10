@@ -29,7 +29,6 @@ def straight_bet(games=3, nums=9):
             roll.remove(rand_one)
             roll.remove(rand_two)
             roll.remove(rand_three)
-            print(cycles)
 
 
 straight_bet()
