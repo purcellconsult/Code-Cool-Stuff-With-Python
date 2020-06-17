@@ -1,5 +1,7 @@
 # Code Cool Stuff With Python
 
+## A Cool Book to Learning Python!
+
 ![Code Cool Stuff With Python Ecover](https://github.com/purcellconsult/Code-Cool-Stuff-With-Python/blob/master/media/images/book/ccswp_ebook_cover.jpg#center)
 
  Let's learn how to build cool stuff with python that impress your friends and get you hired. By the time you’re done you’ll build 12 REAL PROJECTS that force you to master the fundamentals of python while having fun to boot.
